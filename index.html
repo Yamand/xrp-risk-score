@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>XRP Risk Score</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9IiMwYTBlMTQiIHN0cm9rZT0iI2Y3OTMxYSIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTYiIHk9IjIyIiBmb250LWZhbWlseT0iR2VvcmdpYSwgc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmNzkzMWEiIHRleHQtYW5jaG9yPSJtaWRkbGUiPuKCvzwvdGV4dD48L3N2Zz4=">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9IiMwYTBlMTQiIHN0cm9rZT0iIzAwODVjMyIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTYiIHk9IjIxIiBmb250LWZhbWlseT0iR2VvcmdpYSwgc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMwMDg1YzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlhSUDwvdGV4dD48L3N2Zz4=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
@@ -489,9 +489,9 @@ const COMPONENT_META = [
 // Mirrors ZONES in xrp_risk_score.py — base $10/week
 const ZONES = [
   { upper: 0.10, zone: 'Extreme Buy',        mult: 3.0,  size: 30, action: 'Max accumulate',           color: '#16a34a', mood: 'Thriving',  eyes: 'happy',   mouth: 'grin',      particle: 'sparkle', anim: 'anim-extreme_buy' },
-  { upper: 0.20, zone: 'Strong Buy',         mult: 1.5,  size: 15, action: 'Accumulate',                color: '#22c55e', mood: 'Excited',   eyes: 'happy',   mouth: 'smile',     particle: 'sparkle', anim: 'anim-strong_buy' },
-  { upper: 0.25, zone: 'Buy',                mult: 1.0,  size: 10, action: 'Normal DCA',                color: '#4ade80', mood: 'Content',   eyes: 'open',    mouth: 'smile',     particle: 'none',    anim: 'anim-buy' },
-  { upper: 0.35, zone: 'Reduced Buy',        mult: 0.5,  size: 5,  action: 'Slow down',                 color: '#86efac', mood: 'Calm',      eyes: 'open',    mouth: 'neutral',   particle: 'none',    anim: 'anim-reduced_buy' },
+  { upper: 0.25, zone: 'Strong Buy',         mult: 1.5,  size: 15, action: 'Accumulate',                color: '#22c55e', mood: 'Excited',   eyes: 'happy',   mouth: 'smile',     particle: 'sparkle', anim: 'anim-strong_buy' },
+  { upper: 0.35, zone: 'Buy',                mult: 1.0,  size: 10, action: 'Normal DCA',                color: '#4ade80', mood: 'Content',   eyes: 'open',    mouth: 'smile',     particle: 'none',    anim: 'anim-buy' },
+  { upper: 0.45, zone: 'Reduced Buy',        mult: 0.5,  size: 5,  action: 'Slow down',                 color: '#86efac', mood: 'Calm',      eyes: 'open',    mouth: 'neutral',   particle: 'none',    anim: 'anim-reduced_buy' },
   { upper: 0.60, zone: 'Stop — Hold',        mult: 0.0,  size: 0,  action: 'Accumulation done',         color: '#9aa4b5', mood: 'Resting',   eyes: 'flat',    mouth: 'neutral',   particle: 'none',    anim: 'anim-hold' },
   { upper: 0.70, zone: 'Sell Tier 1',        mult: null, size: null, action: 'Exit 5% of holdings',     color: '#f5a623', mood: 'Worried',   eyes: 'worried', mouth: 'frownsoft', particle: 'sweat',   anim: 'anim-sell1' },
   { upper: 0.80, zone: 'Sell Tier 2',        mult: null, size: null, action: 'Exit 10% of holdings',    color: '#f0713f', mood: 'Stressed',  eyes: 'wide',    mouth: 'frown',     particle: 'sweat',   anim: 'anim-sell2' },
