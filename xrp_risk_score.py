@@ -211,9 +211,9 @@ BASE_WEEKLY_USD = 10
 ZONES = [
     # (upper_bound_exclusive, zone, tier, multiplier, action)
     (0.10, "Extreme Buy",   "buy",   3.0, "Max accumulate"),
-    (0.20, "Strong Buy",    "buy",   1.5, "Accumulate"),
-    (0.25, "Buy",           "buy",   1.0, "Normal DCA"),
-    (0.35, "Reduced Buy",   "buy",   0.5, "Slow down"),
+    (0.25, "Strong Buy",    "buy",   1.5, "Accumulate"),
+    (0.35, "Buy",           "buy",   1.0, "Normal DCA"),
+    (0.45, "Reduced Buy",   "buy",   0.5, "Slow down"),
     (0.60, "Stop — Hold",   "hold",  0.0, "Accumulation done"),
     (0.70, "Sell Tier 1",   "sell1", None, "Exit 5% of holdings"),
     (0.80, "Sell Tier 2",   "sell2", None, "Exit 10% of holdings"),
